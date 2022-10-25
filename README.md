@@ -60,7 +60,16 @@ II.     pages/index.js                          HomePage
         @media queries:
                 https://www.folkstalk.com/2022/09/media-query-for-mobile-and-tablet-with-code-examples.html
 
+III.    Life data
+        1.      replace dummy-tours with the backend api: https://tours-f1b12-default-rtdb.firebaseio.com/ 
+                i.      pages/tours/index.js                            AllToursPage
+                ii.     components/tours/tours-list.js                  ToursList
+                iii.    pages/tours/[...data].js                        FilteredToursPage
+                iv.     pages/tours/[tourid].js                         TourPage
+        2.      Test all modified pages
         
+
+
 
 
 
