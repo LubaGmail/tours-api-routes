@@ -1,0 +1,27 @@
+.image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    display: flex;
+    border-style: outset;
+    border-color: gold;
+    border-width: .5rem;
+}
+
+.intro {
+    margin: 2rem 10rem;
+    font-size: 1.2rem;
+    display: flex;
+}
+.intro p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.intro  p::first-letter {
+        font-size: 200%;
+        color: maroon;
+        font-family: Brush Script MT;
+ }
