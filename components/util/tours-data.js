@@ -20,4 +20,10 @@ export async function getTours() {
     return tours
 }
 
+export async function getTour(tourid) {
+    const tours = await getTours()
+    const tour = tours.find(el => el.tourid === tourid)
+    return tour
+}
+
 export default ToursData

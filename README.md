@@ -63,11 +63,10 @@ II.     pages/index.js                          HomePage
 III.    Life data
         1.      replace dummy-tours with the backend api: https://tours-f1b12-default-rtdb.firebaseio.com/ 
                 i.      pages/tours/index.js                            AllToursPage
-                ii.     components/tours/tours-list.js                  ToursList
-                iii.    pages/tours/[...data].js                        FilteredToursPage
-                iv.     pages/tours/[tourid].js                         TourPage
+                ii.     pages/tours/[...data].js                        FilteredToursPage
+                iii.    pages/tours/[tourid].js                         TourPage
         2.      Test all modified pages
-        
+
 
 
 
