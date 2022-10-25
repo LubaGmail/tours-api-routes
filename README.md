@@ -57,8 +57,10 @@ II.     pages/index.js                          HomePage
         1.      Add meta: title, name/content 
         2.      Replace img with Image
         3.      Make the page responsive
+        @media queries:
+                https://www.folkstalk.com/2022/09/media-query-for-mobile-and-tablet-with-code-examples.html
 
-
+        
 
 
 

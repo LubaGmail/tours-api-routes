@@ -39,11 +39,9 @@ const DUMMY_TOURS = [
 
 ]
 
-export const intro = `
-    Witness the building of the pyramids or the sack of Rome. 
+export const intro = `Witness the building of the pyramids or the sack of Rome. 
     Investigate the age of the dinosaurs firsthand. 
-    Visit the Minoan shrine and clime the steps of the Parthenon in Athens. 
-`
+    Visit the Minoan shrine and clime the steps of the Parthenon in Athens.`
 
 export function getAllTours() {
     return DUMMY_TOURS
