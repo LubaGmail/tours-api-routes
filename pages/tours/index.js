@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import ToursData, {getTours} from '../../components/util/tours-data'
+import {getTours} from '../../components/util/tours-data'
 
 // import { getAllTours } from '../../data/dummy-tours'
 import ToursList from '../../components/tours/tours-list'
