@@ -60,7 +60,6 @@ const SearchForm = ({handleSearch}) => {
                     </div>
                         
                     <div className={styles.item}>
-                        <label>&nbsp;</label>
                         <button type='submit' id='btn' name='btn'>
                           <FontAwesomeIcon icon={faMagnifyingGlass} />  Search 
                         </button>

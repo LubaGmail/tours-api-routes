@@ -18,3 +18,14 @@
     color: grey;
     margin: 1rem;
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (min-device-width : 0) and (max-device-width : 480px) {
+    .item {
+        font-size: .9rem;
+    }
+    .desc {
+        font-size: .9rem;
+    }
+
+}
