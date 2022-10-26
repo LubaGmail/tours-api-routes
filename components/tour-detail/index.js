@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Image from 'next/image'
 
 import styles from './index.module.css'
 import LinkButton from '../ui/buttons/link-button';
@@ -10,7 +10,9 @@ const TourDetail = ({ tour }) => {
         <div className="center" >
             <div className={styles.item}>
                 <div>
-                    <img src={tour.image} alt={tour.title}  className={styles.image} />
+                    <Image src={tour.image} alt={tour.title} className={styles.image}
+                        width={642 } height={400}
+                    />
                 </div>
                 <div className={styles.title}>
                     {tour.title}
