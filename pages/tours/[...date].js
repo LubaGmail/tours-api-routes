@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 
 import { filterTours } from '../../data/dummy-tours'
 import ToursList from '../../components/tours/tours-list'
+import PushButton from '../../components/ui/buttons/push-button'
 
 const FilteredToursPage = props => {
     const router = useRouter()
@@ -17,8 +18,12 @@ const FilteredToursPage = props => {
   
     if (isNaN(year) || isNaN(month)) {
         return (
-            <div>
+            <div className='center'>
                 <p className='errorMessage'>Invalid date: {year}, {month}</p>
+                <p></p>
+                <PushButton fn={el => router.back()}>
+                    Go Back
+                </PushButton>
             </div>
             
         )
@@ -29,9 +34,14 @@ const FilteredToursPage = props => {
 
     if (tours?.length === 0) {
         return (
-            <div>
-                <h2 className="center">{JSON.stringify(router.query)}</h2>
+            <div  className="center">
+                <h2>{JSON.stringify(router.query)}</h2>
                 <p className='infoMessage'>No tours found for the above date. </p>
+                <p></p>
+                <PushButton fn={el => router.back()}>
+                    Go Back
+                </PushButton>
+
             </div>
         )
     }

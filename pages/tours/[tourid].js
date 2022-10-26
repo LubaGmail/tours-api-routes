@@ -1,14 +1,14 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+import { router } from 'next/router'
 
 import Logistics from '../../components/tour-detail/logistics'
-// import { getTourById } from '../../data/dummy-tours'
-import {getTour} from '../../components/util/tours-data'
+import { getTour } from '../../components/util/tours-data'   
+import PushButton from '../../components/ui/buttons/push-button'   
 
 const TourPage = (props) => {
     const router = useRouter()
     const tourid = router.query.tourid
-    
     const [tour, setTour] = useState(props.tour)
 
     // useEffect(() => {
@@ -17,9 +17,15 @@ const TourPage = (props) => {
     // }, [tourid])
 
     return (
-        <div>
-            <h2 className="center">{tour?.title}</h2>
+        <div className="center">
+            <h2>{tour?.title}</h2>
             <Logistics tour={tour} />
+
+            <p></p>
+            <PushButton fn={el => router.back()}>
+                Go Back
+            </PushButton>
+
         </div>
     )   
 }

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import styles from './link-button.module.css'
+import styles from './button.module.css'
 
 const LinkButton = props => {
     /**
