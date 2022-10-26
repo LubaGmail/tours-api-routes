@@ -71,10 +71,7 @@ Cleanup
         1.      add LinkButton to TourPage as 'Go Back'
         2.      Make MainHeader responsive @media query
 
-        
-
-
-
+      
 
 
 

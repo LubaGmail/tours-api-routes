@@ -1,13 +1,15 @@
-import {useRef, useState} from 'react'
+import { useRef, useState } from 'react'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './search-form.module.css'
-import SearchIcon from '../ui/icons/search-icon'
 
 const SearchForm = ({handleSearch}) => {
     const yearRef = useRef()
     const monthRef = useRef()
     const [error, setError] = useState()
-
+  
     const handleSubmit = ev => {
         ev.preventDefault()
         const year = +(yearRef.current.value)
@@ -28,17 +30,19 @@ const SearchForm = ({handleSearch}) => {
 
     return (
 
-        <>
+        <div className={styles.container}>
             <form onSubmit={handleSubmit} className={styles.form}>
-                <div className={styles.controls}>
-                    <div className={styles.control}>
+
+                    <div className={styles.item}>
                         <label htmlFor='year'>Search: </label>
                         <select id='year' name='year' ref={yearRef}>
                             <option value='2022'>2022</option>
                             <option value='2023'>2023</option>
                         </select>
-     
-                        <label htmlFor='month'>Month:</label>
+                    </div>
+
+                    <div className={styles.item}>
+                        <label htmlFor='month'>Month: </label>
                         <select id='month' name='month' ref={monthRef}>
                             <option value='1'>January</option>
                             <option value='2'>February</option>
@@ -53,17 +57,17 @@ const SearchForm = ({handleSearch}) => {
                             <option value='11'>November</option>
                             <option value='12'>December</option>
                         </select>
-
+                    </div>
                         
-                        <button type='submit'>
-                            <span><SearchIcon /></span>
-                            <span> </span>
+                    <div className={styles.item}>
+                        <label>&nbsp;</label>
+                        <button type='submit' id='btn' name='btn'>
+                          <FontAwesomeIcon icon={faMagnifyingGlass} />  Search 
                         </button>
                     </div>
-                </div>
   
             </form>
-        </>
+        </div>
     )
 }
 
