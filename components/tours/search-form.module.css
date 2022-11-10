@@ -12,6 +12,7 @@
 .form select,
 .form button {
     height: 2rem;
+    cursor: pointer;
 }
 
 .form button {
