@@ -6,13 +6,25 @@ import {getTours} from '../../components/util/tours-data'
 import ToursList from '../../components/tours/tours-list'
 import SearchForm from '../../components/tours/search-form'
 
+const TOURS_API = '/api/tours/'
+
 const AllToursPage = props => {
     const [tours, setTours] = useState(props.tours)
     const router = useRouter()
 
-    // useEffect(() => {
-    //     setTours(getTours())
-    // }, [])
+    useEffect(() => {
+        console.log('pages/tours/index useEffect()')
+        const getData = async () => {
+            const response = await fetch(TOURS_API)
+            const responseJson = await response.json()
+            const statusCode = response.status
+            const appStatus = responseJson.status
+            const data = responseJson.data
+
+            setTours(data)
+        }
+        getData()
+    }, [])
 
     const handleSearch = (year, month) => {
         const fullPath = `/tours/${year}/${month}`
@@ -29,13 +41,14 @@ const AllToursPage = props => {
 }
 
 export async function getStaticProps(context) {
+    console.log('pages/tours/index getStaticProps')
     const tours = await getTours()
 
     return {
         props: {
             tours: tours
         },
-        revalidate: 1000
+        revalidate: 3600            // 1 hour
     }
 }
 

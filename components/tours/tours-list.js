@@ -11,7 +11,7 @@ const ToursList = ({tours}) => {
         <>
             <div className={styles.list}>
             {
-                tours.map(el => (
+                tours?.map(el => (
                     <li key={el.tourid} >
                         <TourDetail tour={el} />
                     </li>
