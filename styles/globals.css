@@ -1,0 +1,60 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.center {
+  text-align: center;
+}
+h2 {
+  color: maroon;
+  text-rendering: optimizeLegibility;
+  text-shadow: -2px 2px 4px 
+    rgba(0, 0, 0, 0.5), 
+    2px -2px 0 
+    rgba(255, 255, 255, 0.9);
+}
+
+.greenbox {
+  text-align: center;
+  border: 3px solid green;
+}
+
+.infoMessage {
+  text-align: center;
+  margin: 2rem;
+  font-size: large;
+  text-rendering: optimizeLegibility;
+}
+
+.errorMessage {
+  text-align: center;
+  margin: 2rem;
+  font-size: large;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
