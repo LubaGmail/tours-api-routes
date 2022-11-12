@@ -34,7 +34,7 @@ const SearchForm = ({handleSearch}) => {
             <form onSubmit={handleSubmit} className={styles.form}>
 
                 <div>
-                    <label htmlFor='year'>Year: </label>
+                    <label htmlFor='year'>Year: &nbsp;</label>
                     <select id='year' name='year' ref={yearRef}>
                         <option value='2022'>2022</option>
                         <option value='2023'>2023</option>
