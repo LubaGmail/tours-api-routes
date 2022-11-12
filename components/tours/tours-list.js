@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react' 
+import Head from 'next/head'
 
 import { getAllTours } from '../../data/dummy-tours'
 import styles from './tours-list.module.css'
@@ -9,6 +10,12 @@ const ToursList = ({tours}) => {
     return (
 
         <>
+            <Head>
+                <meta 
+                    name='Time travel tours'
+                    context='Browse and search time travel tours'
+                />
+            </Head>
             <div className={styles.list}>
             {
                 tours?.map(el => (

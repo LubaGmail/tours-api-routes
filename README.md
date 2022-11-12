@@ -29,5 +29,10 @@ IV.     FilteredToursPage       pages\tours\[...date].js
 V.      TourPage        pages\tours\[tourid].js
         i.      Add client side fetching
         ii.     Add new API handler - pages/api/tours[tourid].js
-        
+
+VI.     Add meta to each page
+
+VII.    Beautify pages 
+
+
 

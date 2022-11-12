@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { router } from 'next/router'
+import Head from 'next/head'
 
 import Logistics from '../../components/tour-detail/logistics'
 import { getTour } from '../../components/util/tours-data'   
@@ -46,6 +47,13 @@ const TourPage = (props) => {
 
     return (
         <div className="center">
+            <Head>
+                <title>Tour: {tour.title}</title>
+                <meta
+                    name={tour.title}
+                    content={tour.period}
+                />
+            </Head>
             <h2>{tour?.title}</h2>
             <Logistics tour={tour} />
 

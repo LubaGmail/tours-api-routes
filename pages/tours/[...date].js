@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 
 // import { filterTours } from '../../data/dummy-tours'
 import ToursList from '../../components/tours/tours-list'
@@ -83,6 +84,9 @@ const FilteredToursPage = props => {
     
     return (
         <>
+            <Head>
+                <title>Tours available in {year}/{month}</title>
+            </Head>
             <h2 className="center">Filtered Tours: {JSON.stringify(router.query)}</h2>
             <ToursList tours = {tours} />
         </>
