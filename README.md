@@ -26,5 +26,8 @@ IV.     FilteredToursPage       pages\tours\[...date].js
         i.      create pages/api/tours/getFilteredTours(nYear, nMonth)
         ii.     replace filterTours with fetch to the API handler
 
-
+V.      TourPage        pages\tours\[tourid].js
+        i.      Add client side fetching
+        ii.     Add new API handler - pages/api/tours[tourid].js
+        
 
