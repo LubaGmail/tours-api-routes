@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import {getTours} from '../../components/util/tours-data'
+import { getTours } from '../../components/util/tours-data'
 
 // import { getAllTours } from '../../data/dummy-tours'
 import ToursList from '../../components/tours/tours-list'
@@ -13,12 +13,12 @@ const AllToursPage = props => {
     const router = useRouter()
 
     useEffect(() => {
-        console.log('pages/tours/index useEffect()')
         const getData = async () => {
             const response = await fetch(TOURS_API)
             const responseJson = await response.json()
+   
             const statusCode = response.status
-            const appStatus = responseJson.status
+            const appStatus = responseJson.appStatus
             const data = responseJson.data
 
             setTours(data)
@@ -32,7 +32,6 @@ const AllToursPage = props => {
     }
 
     return (
-
         <>
             <SearchForm handleSearch={handleSearch} />
             <ToursList tours={tours} />
@@ -41,7 +40,6 @@ const AllToursPage = props => {
 }
 
 export async function getStaticProps(context) {
-    console.log('pages/tours/index getStaticProps')
     const tours = await getTours()
 
     return {

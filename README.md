@@ -15,8 +15,16 @@ II.     AllToursPage              pages\tours\index.js
         i.      create pages/api/tours/index.js                 handler
         ii.     replace `const tours = await getTours()` in getStaticProps with a call to the API 
 
+III.    SearchForm                  components\tours\search-form.js
+        pages\tours\index.js        
+            <SearchForm handleSearch={handleSearch} />  
+                router.push(`/tours/${year}/${month}`)
+                    FilteredToursPage      pages/tours/[...date].js
+                         tours = filterTours(nYear, nMonth)
 
-
+IV.     FilteredToursPage       pages\tours\[...date].js
+        i.      create pages/api/tours/getFilteredTours(nYear, nMonth)
+        ii.     replace filterTours with fetch to the API handler
 
 
 
